@@ -3,4 +3,4 @@
 
 > [!IMPORTANT]
 > Link do materiałów z ćwiczeń:
-> krzywicki.pro/teaching
+> https://krzywicki.pro/teaching/
