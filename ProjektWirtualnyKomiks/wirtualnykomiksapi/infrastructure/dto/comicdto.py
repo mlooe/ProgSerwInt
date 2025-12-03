@@ -3,8 +3,8 @@ from typing import Iterable
 
 from pydantic import BaseModel, ConfigDict  # type: ignore
 
-from core.domain.genre import Genre
-from core.domain.tag import Tag
+from ProjektWirtualnyKomiks.wirtualnykomiksapi.core.domain.genre import Genre
+from ProjektWirtualnyKomiks.wirtualnykomiksapi.core.domain.tag import Tag
 
 class ComicDTO(BaseModel):
     """A model representing DTO for comic data"""

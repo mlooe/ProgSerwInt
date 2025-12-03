@@ -2,10 +2,10 @@
 
 from typing import Iterable, Optional, List
 
-from core.repositories.icomic import IComicRepository
-from core.domain.comic import Comic, ComicIn
-from infrastructure.dto.comicdto import ComicDTO
-from infrastructure.services.icomic import IComicService
+from ProjektWirtualnyKomiks.wirtualnykomiksapi.core.repositories.icomic import IComicRepository
+from ProjektWirtualnyKomiks.wirtualnykomiksapi.core.domain.comic import Comic, ComicIn
+from ProjektWirtualnyKomiks.wirtualnykomiksapi.infrastructure.dto.comicdto import ComicDTO
+from ProjektWirtualnyKomiks.wirtualnykomiksapi.infrastructure.services.icomic import IComicService
 
 class ComicService(IComicService):
     """A class implementing the comic service"""

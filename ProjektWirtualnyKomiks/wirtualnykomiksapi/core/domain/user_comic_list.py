@@ -15,6 +15,7 @@ class UserComicListIn(BaseModel):
     comic_id: int
     status: UserComicListStatus
 
+
 class UserComicList(UserComicListIn):
     """Model representing user comic list attributes in the database"""
     id: int

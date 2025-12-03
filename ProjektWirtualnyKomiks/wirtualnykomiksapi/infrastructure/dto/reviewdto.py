@@ -1,5 +1,4 @@
 """A module containing DTO models for review"""
-from typing import Iterable
 
 from pydantic import BaseModel, ConfigDict, UUID4, Optional  # type: ignore
 

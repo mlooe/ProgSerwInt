@@ -10,3 +10,4 @@ class Genre(GenreIn):
     """Model representing genre's attributes in the database"""
     id: int
     model_config = ConfigDict(from_attributes=True, extra="ignore")
+

@@ -8,6 +8,7 @@ class UserIn(BaseModel):
     email: str
     password: str
 
+
 class User(UserIn):
     """The user model class"""
     id: UUID4

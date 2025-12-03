@@ -3,7 +3,8 @@
 from abc import ABC, abstractmethod
 from typing import Iterable, Optional, List, Any
 
-from core.domain.comic import Comic, ComicIn
+from ProjektWirtualnyKomiks.wirtualnykomiksapi.core.domain.comic import Comic, ComicIn
+from ProjektWirtualnyKomiks.wirtualnykomiksapi.infrastructure.dto.comicdto import ComicDTO
 
 class IComicService(ABC):
     """A class representing comic repository"""
@@ -17,7 +18,7 @@ class IComicService(ABC):
         """
 
     @abstractmethod
-    async def get_comic_by_id(self, comic_id: int) -> Comic | None:
+    async def get_comic_by_id(self, comic_id: int) -> ComicDTO | None:
         """The method getting comics assigned to particular ID.
 
             Args:

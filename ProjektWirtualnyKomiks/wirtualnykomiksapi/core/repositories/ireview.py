@@ -1,10 +1,11 @@
 """Model containing review repository abstractions"""
 
 from abc import ABC, abstractmethod
-from typing import Iterable,Any
+from typing import Iterable, Any
 from pydantic import UUID4
 
-from src.core.domain.review import ReviewIn
+from ProjektWirtualnyKomiks.wirtualnykomiksapi.core.domain.review import ReviewIn
+
 
 class IReviewRepository(ABC):
     """An abstract class representing protocol of review repository"""

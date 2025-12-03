@@ -27,8 +27,24 @@ comic_table = sqlalchemy.Table(
     sqlalchemy.Column("description", sqlalchemy.Text, nullable=True),
     sqlalchemy.Column("views", sqlalchemy.Integer, default=0),
     sqlalchemy.Column("likes", sqlalchemy.Integer, default=0),
+    sqlalchemy.Column("genres", sqlalchemy.String),
+    sqlalchemy.Column("tags", sqlalchemy.String),
+    sqlalchemy.Column("average_rating", sqlalchemy.Float),
 )
 
+
+user_table = sqlalchemy.Table(
+    "users",
+    metadata,
+    sqlalchemy.Column(
+        "id",
+        UUID(as_uuid=True),
+        primary_key=True,
+        server_default=sqlalchemy.text("gen_random_uuid()"),
+    ),
+    sqlalchemy.Column("email", sqlalchemy.String, unique=True),
+    sqlalchemy.Column("password", sqlalchemy.String),
+)
 
 db_uri = (
     f"postgresql+asyncpg://{config.DB_USER}:{config.DB_PASSWORD}"
