@@ -15,6 +15,7 @@ class ReviewBroker(ReviewIn):
     """A broker class including user in the model"""
     user_id: UUID4
 
+
 class Review(ReviewBroker):
     """Model representing review's attributes in the database"""
     id: int

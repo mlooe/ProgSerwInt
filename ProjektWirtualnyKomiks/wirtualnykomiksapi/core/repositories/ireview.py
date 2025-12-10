@@ -4,7 +4,7 @@ from abc import ABC, abstractmethod
 from typing import Iterable, Any
 from pydantic import UUID4
 
-from ProjektWirtualnyKomiks.wirtualnykomiksapi.core.domain.review import ReviewIn
+from wirtualnykomiksapi.core.domain.review import ReviewIn
 
 
 class IReviewRepository(ABC):

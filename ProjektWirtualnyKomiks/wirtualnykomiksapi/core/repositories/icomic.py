@@ -3,7 +3,8 @@
 from abc import ABC, abstractmethod
 from typing import Any, Iterable, List, Optional
 
-from ProjektWirtualnyKomiks.wirtualnykomiksapi.core.domain.comic import Comic, ComicIn
+from wirtualnykomiksapi.core.domain.comic import Comic, ComicIn
+
 
 class IComicRepository(ABC):
     """An abstract class representing protocol of comic repository"""

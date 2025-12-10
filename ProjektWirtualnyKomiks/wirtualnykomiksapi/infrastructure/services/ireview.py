@@ -3,8 +3,8 @@
 from abc import ABC, abstractmethod
 from typing import Iterable, Optional, List
 
-from ProjektWirtualnyKomiks.wirtualnykomiksapi.core.domain.review import Review, ReviewIn
-from ProjektWirtualnyKomiks.wirtualnykomiksapi.infrastructure.dto.reviewdto import ReviewDTO
+from wirtualnykomiksapi.core.domain.review import Review, ReviewIn
+from wirtualnykomiksapi.infrastructure.dto.reviewdto import ReviewDTO
 from pydantic import UUID4
 
 

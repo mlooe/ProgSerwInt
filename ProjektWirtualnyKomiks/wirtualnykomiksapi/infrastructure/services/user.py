@@ -1,14 +1,14 @@
-"""A module containing user service."""
+"""A module containing user service implementation."""
 
 from pydantic import UUID4
 
-from ProjektWirtualnyKomiks.wirtualnykomiksapi.core.domain.user import UserIn
-from ProjektWirtualnyKomiks.wirtualnykomiksapi.core.repositories.iuser import IUserRepository
-from ProjektWirtualnyKomiks.wirtualnykomiksapi.infrastructure.dto.userdto import UserDTO
-from ProjektWirtualnyKomiks.wirtualnykomiksapi.infrastructure.dto.tokendto import TokenDTO
-from ProjektWirtualnyKomiks.wirtualnykomiksapi.infrastructure.services.iuser import IUserService
-from ProjektWirtualnyKomiks.wirtualnykomiksapi.infrastructure.utils.password import verify_password
-from ProjektWirtualnyKomiks.wirtualnykomiksapi.infrastructure.utils.token import generate_user_token
+from wirtualnykomiksapi.core.domain.user import UserIn
+from wirtualnykomiksapi.core.repositories.iuser import IUserRepository
+from wirtualnykomiksapi.infrastructure.dto.userdto import UserDTO
+from wirtualnykomiksapi.infrastructure.dto.tokendto import TokenDTO
+from wirtualnykomiksapi.infrastructure.services.iuser import IUserService
+from wirtualnykomiksapi.infrastructure.utils.password import verify_password
+from wirtualnykomiksapi.infrastructure.utils.token import generate_user_token
 
 
 class UserService(IUserService):

@@ -2,6 +2,7 @@
 
 from pydantic import BaseModel, ConfigDict, UUID4
 
+
 class UserComicListStatus(str):
     """Comic status in user's comic list"""
     PLANNING = "planning"

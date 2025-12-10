@@ -4,9 +4,9 @@ from abc import ABC, abstractmethod
 
 from pydantic import UUID5
 
-from ProjektWirtualnyKomiks.wirtualnykomiksapi.core.domain.user import UserIn
-from ProjektWirtualnyKomiks.wirtualnykomiksapi.infrastructure.dto.userdto import UserDTO
-from ProjektWirtualnyKomiks.wirtualnykomiksapi.infrastructure.dto.tokendto import TokenDTO
+from wirtualnykomiksapi.core.domain.user import UserIn
+from wirtualnykomiksapi.infrastructure.dto.userdto import UserDTO
+from wirtualnykomiksapi.infrastructure.dto.tokendto import TokenDTO
 
 class IUserService(ABC):
     """An abstract class for user service."""

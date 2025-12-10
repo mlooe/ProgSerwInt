@@ -3,8 +3,9 @@
 from abc import ABC, abstractmethod
 from typing import Iterable, Optional, List, Any
 
-from ProjektWirtualnyKomiks.wirtualnykomiksapi.core.domain.comic import Comic, ComicIn
-from ProjektWirtualnyKomiks.wirtualnykomiksapi.infrastructure.dto.comicdto import ComicDTO
+from wirtualnykomiksapi.core.domain.comic import Comic, ComicIn
+from wirtualnykomiksapi.infrastructure.dto.comicdto import ComicDTO
+
 
 class IComicService(ABC):
     """A class representing comic repository"""
@@ -61,7 +62,6 @@ class IComicService(ABC):
         Returns:
             Iterable[Any]: The collection of most liked/viewed comics
         """
-
 
     @abstractmethod
     async def add_comic(self, comic: ComicIn) -> Comic:

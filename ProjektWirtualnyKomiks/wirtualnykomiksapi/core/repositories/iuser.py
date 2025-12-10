@@ -5,7 +5,7 @@ from typing import Any
 
 from pydantic import UUID5
 
-from ProjektWirtualnyKomiks.wirtualnykomiksapi.core.domain.user import UserIn
+from wirtualnykomiksapi.core.domain.user import UserIn
 
 class IUserRepository(ABC):
     """An abstract repository class for user repository"""

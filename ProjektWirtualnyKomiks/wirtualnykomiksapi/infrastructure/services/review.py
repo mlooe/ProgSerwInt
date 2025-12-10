@@ -2,10 +2,10 @@
 
 from typing import Iterable, Optional, List
 
-from ProjektWirtualnyKomiks.wirtualnykomiksapi.core.domain.review import Review, ReviewBroker
-from ProjektWirtualnyKomiks.wirtualnykomiksapi.core.repositories.ireview import IReviewRepository
-from ProjektWirtualnyKomiks.wirtualnykomiksapi.infrastructure.services.ireview import IReviewService
-from ProjektWirtualnyKomiks.wirtualnykomiksapi.infrastructure.dto.reviewdto import ReviewDTO
+from wirtualnykomiksapi.core.domain.review import Review, ReviewBroker
+from wirtualnykomiksapi.core.repositories.ireview import IReviewRepository
+from wirtualnykomiksapi.infrastructure.services.ireview import IReviewService
+from wirtualnykomiksapi.infrastructure.dto.reviewdto import ReviewDTO
 from pydantic import UUID4
 
 

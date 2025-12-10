@@ -2,10 +2,11 @@
 
 from typing import Iterable, Optional, List
 
-from ProjektWirtualnyKomiks.wirtualnykomiksapi.core.repositories.icomic import IComicRepository
-from ProjektWirtualnyKomiks.wirtualnykomiksapi.core.domain.comic import Comic, ComicIn
-from ProjektWirtualnyKomiks.wirtualnykomiksapi.infrastructure.dto.comicdto import ComicDTO
-from ProjektWirtualnyKomiks.wirtualnykomiksapi.infrastructure.services.icomic import IComicService
+from wirtualnykomiksapi.core.repositories.icomic import IComicRepository
+from wirtualnykomiksapi.core.domain.comic import Comic, ComicIn
+from wirtualnykomiksapi.infrastructure.dto.comicdto import ComicDTO
+from wirtualnykomiksapi.infrastructure.services.icomic import IComicService
+
 
 class ComicService(IComicService):
     """A class implementing the comic service"""
@@ -54,6 +55,30 @@ class ComicService(IComicService):
         """
 
         return await self._repository.get_filtered_comics(genres, tags)
+
+    async def get_top_rated_comics(self, limit: int) -> Iterable[Comic]:
+        """The method getting comics with the highest average rating
+
+        Args:
+            limit (int): The amount of shown comics
+
+        Returns:
+            Iterable[Any]: The collection of highest average rated comics
+        """
+
+        return await self._repository.get_top_rated_comics(limit)
+
+    async def get_most_popular_comics(self, limit: int) -> Iterable[Comic]:
+        """The method getting comics with the most likes or views
+
+        Args:
+            limit (int): The amount of shown comics
+
+        Returns:
+            Iterable[Any]: The collection of most liked/viewed comics
+        """
+
+        return await self._repository.get_most_popular_comics(limit)
 
     async def add_comic(self, data: ComicIn) -> Comic | None:
         """The method adding new comic to the data storage

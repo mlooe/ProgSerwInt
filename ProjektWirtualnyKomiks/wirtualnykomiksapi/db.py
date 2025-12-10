@@ -32,6 +32,27 @@ comic_table = sqlalchemy.Table(
     sqlalchemy.Column("average_rating", sqlalchemy.Float),
 )
 
+review_table = sqlalchemy.Table(
+    "reviews",
+    metadata,
+    sqlalchemy.Column("id", sqlalchemy.Integer, primary_key=True),
+    sqlalchemy.Column("comic_id", sqlalchemy.ForeignKey("comics.id"), nullable=False),
+    sqlalchemy.Column("user_id", sqlalchemy.ForeignKey("users.id"), nullable=False),
+    sqlalchemy.Column("rating", sqlalchemy.Integer),
+    sqlalchemy.Column("comment", sqlalchemy.String, nullable=True)
+)
+
+user_comic_list_table = sqlalchemy.Table(
+    "user_comic_lists",
+    metadata,
+    sqlalchemy.Column("id", sqlalchemy.Integer, primary_key=True),
+    sqlalchemy.Column("user_id", sqlalchemy.ForeignKey("users.id"), nullable=False),
+    sqlalchemy.Column("comic_id", sqlalchemy.ForeignKey("comics.id"), nullable=False),
+    sqlalchemy.Column("status_planning", sqlalchemy.String),
+    sqlalchemy.Column("status_reading", sqlalchemy.String),
+    sqlalchemy.Column("status_completed", sqlalchemy.String),
+    sqlalchemy.Column("status_dropped", sqlalchemy.String)
+)
 
 user_table = sqlalchemy.Table(
     "users",
@@ -45,6 +66,8 @@ user_table = sqlalchemy.Table(
     sqlalchemy.Column("email", sqlalchemy.String, unique=True),
     sqlalchemy.Column("password", sqlalchemy.String),
 )
+
+
 
 db_uri = (
     f"postgresql+asyncpg://{config.DB_USER}:{config.DB_PASSWORD}"
